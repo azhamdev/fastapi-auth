@@ -27,4 +27,4 @@ def login_user(body: LoginUser, db: Session = Depends(db_session)):
     if not is_password_valid(body.password, user.password):
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail="Invalid credentials")
 
-    return {"message": "Login successful"}
+    return {"message": "Login successfuly"}
